@@ -7,8 +7,8 @@
 class Queue
 {
 private:
-    std::counting_semaphore<5> semProducer;
-    std::counting_semaphore<5> semConsumer;
+    std::counting_semaphore<BUFFER_LEN> semProducer;
+    std::counting_semaphore<BUFFER_LEN> semConsumer;
     std::mutex mutex;
     int data[BUFFER_LEN];
 
